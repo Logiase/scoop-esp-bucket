@@ -1,0 +1,61 @@
+{
+    "version": "8_4_0-esp-2021r2-patch1",
+    "description": "Toolchain for Xtensa (ESP32) based on GCC",
+    "homepage": "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/tools/idf-tools.html#list-of-idf-tools",
+    "license": "GPL-3.0-with-GCC-exception",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/espressif/crosstool-NG/releases/download/esp-2021r2/xtensa-esp32-elf-gcc8_4_0-esp-2021r2-patch1-win64.zip",
+            "hash": "36a47c80fa79a867244f39794565c391cf4646d221c8f3e228bef45a5de1d32a"
+        },
+        "32bit": {
+            "url": "https://github.com/espressif/crosstool-NG/releases/download/esp-2021r2/xtensa-esp32-elf-gcc8_4_0-esp-2021r2-patch1-win32.zip",
+            "hash": "eba06307022cc659e3c5345ecb3c620c99ec5d0d2a5cb59ac21c831edcbafc45"
+        }
+    },
+    "bin": [
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-addr2line.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-ar.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-as.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-c++.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-c++filt.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-cc.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-cpp.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-elfedit.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-g++.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-gcc.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-gcc-8.4.0.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-gcc-ar.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-gcc-nm.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-gcc-ranlib.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-gcov.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-gcov-dump.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-gcov-tool.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-gdb.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-gprof.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-ld.bfd.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-ld.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-nm.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-objcopy.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-objdump.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-ranlib.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-readelf.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-size.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-strings.exe",
+        "xtensa-esp32-elf\\bin\\xtensa-esp32-elf-strip.exe"
+    ],
+    "checkver": {
+        "url": "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/tools/idf-tools.html",
+        "regex": "xtensa-esp32-elf-gcc([\\d_]+-esp-([\\w]+))-win64.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/espressif/crosstool-NG/releases/download/esp-$match2/xtensa-esp32-elf-gcc$version-win64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/espressif/crosstool-NG/releases/download/esp-$match2/xtensa-esp32-elf-gcc$version-win32.zip"
+            }
+        }
+    }
+}
